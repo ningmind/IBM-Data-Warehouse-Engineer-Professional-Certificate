@@ -1,3 +1,4 @@
+## [Hands-on Lab] Getting Started with Data Warehousing and BI Analytics
 ###### Lab: Create Db2 service instance and Get started with the Db2 console  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html?origin=www.coursera.org
 
