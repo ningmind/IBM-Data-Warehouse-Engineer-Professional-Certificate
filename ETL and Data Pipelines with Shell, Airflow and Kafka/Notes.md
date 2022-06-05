@@ -1,3 +1,4 @@
+## ETL and Data Pipelines with Shell, Airflow and Kafka
 - ETL Fundamentals (Extract, Transformation, Load)
     - Extraction: configure access to static or streaming data and read it into an application
     - Transformation: process data, conform to target systems and use cases, clean, filter, join, feature engineering
