@@ -1,1 +1,112 @@
-
+- ETL Fundamentals (Extract, Transformation, Load)
+    - Extraction: configure access to static or streaming data and read it into an application
+    - Transformation: process data, conform to target systems and use cases, clean, filter, join, feature engineering
+    - Load: move data into a new environment (database, data warehouse, data mart) and make the data readily available for analytics, dashboards and reports
+    - Use cases
+        - Demanding scalability requirements of Big Data
+        - Streaming analytics
+        - Integration of highly distributed data sources
+        - Multiple data products from the same sources
+    - ELT is an emerging trend
+        - Big Data → Cloud Computing
+        - Seperates the data pipeline from the processing
+        - More flexibility, no information loss
+- ETL vs ELT
+    - Transformations for ETL: within the data pipeline (schema-on-write, rigid, for relational data, scalability difficult)
+    - Transformations for ELT: destination environment (schema-on-read, flexible, solve scalability problems, handle both structured and unstructured data, support self-service)
+    - Evolution of ETL → ELT: increase demand for access to raw data, ELT addresses challenges imposed by big data and lengthy time-to-insight
+- Data Extraction Techniques
+    - OCR (Optical Character Recognition): scan from paper
+    - ADC (Analog-to-digital converter)
+    - Mail, phone, in-person surveys, polls, cookies, user logs
+    - Web scraping, APIs, Database querying, Edge computing
+- Data Transformation Techniques
+    - Data typing
+    - Data structuring
+    - Anonymizing, encrypting
+    - Cleaning, normalizing, filtering, sorting, aggregating
+- Data Pipelines
+    - Applications of data pipelines
+        - Backing up files
+        - Integrating disparate raw data sources into a data lake
+        - Moving transactional records to a data warehouse
+        - Streaming data from IoT devices to dashboards
+        - Preparing raw data for machine learning development or production
+        - Messaging systems such as email, SMS, video meetings
+    - Key data pipeline processes
+        - Data extraction → Data ingestion → Transformation stages
+        - Further stages: Loading into destination facility → Scheduling or triggering → Monitoring → Maintenance and optimization
+        - Key pipeline monitoring considerations: latency, throughput, warnings, errors, failures, utilization rate
+        - Load balanced pipelines: just-in-time data packet relays, no upstream data flow bottlenecks, uniform packet throughput for each stage
+            - Handle unbalanced loads: parallelize slower stages to speed up throughput, replicate processes on multiple CPUs/cores/threads, data packets distributed across these channels
+        - Stage synchronization: I/O buffers to help synchronize stages and distribute loads on parallelized stages, holding area for data between processing stages, buffers regulate the flow of data may improve throughput
+        - Batch vs Streaming Data Pipeline (accuracy vs latency tradeoff)
+            - Batch: operate on batches of data, usually run periodically (hours, days, weeks), can be initiated based on data size or other triggers, when lateset data isn’t needed, typical choice when accuracy is critical
+                - Use cases: data backups, transaction history loading, billing and order processing, data modeling, forecasting sales or weather, retrospective data analysis, diagnostic medical image
+            - Streaming: ingest data packets in rapid succession, for real-time results, records/events processed as they happen, event streams can be loaded to storage
+                - Use cases: watching movies, listening to music, socal media feeds, fraud detection, user behavior analysis, stock market trading
+            - Micro-batch: smaller batches improve load balancing, lower latency
+- Use Apache Airflow to build Data Pipelines
+    - Apache Airflow Overview
+        - Ideal process: No Status → Scheduled → Queued → Running → Success
+    - Features
+        - Pure Python = Flexibility
+        - Useful UI = Full Insight
+        - Integration = Plug and Play
+        - Easy to Use = Unlimited Pipeline Scope
+        - Open Source = Community of Developers
+    - Principles: Scalable, Dynamic, Extensible, Lean
+    - Use Cases
+        - Defining and organizing machine learning pipeline dependencies
+        - Increasing the visibility of batch processes and decoupling them
+        - Deploying as an enterprise scheduling tool
+        - Orchestrating SQL transformations in data warehouses
+    - Directed Acyclic Graph (DAG)
+        - Graph: nodes (tasks) and edges (dependencies)
+        - Directed graph: each edge has a direction
+        - Acyclic: no loops (cycles)
+        - DAG Python script blocks: library imports, DAG arguments, DAG definition, task definitions, task pipeline
+        - Airflow Scheduler: deploys on worker array, follows your DAG, first DAG run, subsequent runs
+    - Airflow Monitoring Metrics
+        - Counters: metrics that always increase - total count of task instances failures/successes
+        - Gauges: metrics that may fluctuate - number of running tasks / DAG bag size or number of DAGs in production
+        - Timers: metrics related to time duration - milliseconds to finish a task / reach a success or failed state
+    - Airflow Storing and Analyzing Metrics: collect, send, aggregate and visualize
+- Use Apache Kafka to build Pipelines for Streaming Data
+    - Common distributed event formats
+        - Primitive
+        - A key-value pair
+        - A key-value with a timestamp
+    - One source to one destination
+        - Event Source: Sensors, Devices, Databases, Applications, etc.
+        - Event Destination: File systems, Databases, Applications, etc.
+    - Many sources to many destinations: FTP/HTTP/JDBC/SCP
+        - Event Source → (Send) → Event Streaming Platform (ESP) → (Consume/Subscribe) → Event Destination
+        - Common components of an ESP
+            - Event Broker: Ingester, Processor, Consumption
+            - Event Storage
+            - Analytic and Query Engine
+    - Apache Kafka (Event Streaming Platform / ESP)
+        - Common use cases: high throughput and reliable data transportation services among various event sources and destinations
+            - Event Source: user activities, metrics, logs, financials transactions
+            - Event Destination: databases, anaytics, notifications, governanace and audit
+        - Kafka architecture
+            - Distributed Clients: Kafka CLI, High-level programming APIs
+            - Network Protocol: Incoming/Outgoing bytes
+            - Distributed Servers: Brokers
+        - Kafka main features
+            - Distribution system
+            - Highly scalable
+            - Highly reliable
+            - Permanent persistency
+            - Open source (free, customize)
+        - Event streaming as a service - common Kafka services: Confluent Cloud, IBM Event Streams, Amazon MSK
+    - Building Event Streaming Pipelines using Kafka
+        - Kafka topic CLI: create a topic, list topics, get topic details, delete a topic
+        - Kafka producer CLI: start a producer to a topic with or without keys
+        - Kafka consumer CLI: read new or all events
+    - Kafka Streaming Process
+        - Kafka Streams API
+            - Simple client library to facilitate data processing in event streaming pipelines
+            - Processes and analyzes data stored in Kafka topics
+            - Record only processed once
