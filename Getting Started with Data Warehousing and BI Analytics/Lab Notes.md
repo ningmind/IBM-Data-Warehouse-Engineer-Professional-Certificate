@@ -1,8 +1,8 @@
 ## [Hands-on Lab] Getting Started with Data Warehousing and BI Analytics
-###### Lab: Create Db2 service instance and Get started with the Db2 console  
+##### Lab: Create Db2 service instance and Get started with the Db2 console  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html?origin=www.coursera.org
 
-###### Lab: Create the schema on the data warehouse  
+##### Lab: Create the schema on the data warehouse  
 Step 1: Start the postgresql server.  
 start_postgres  
 Step 2: Create the database on the data warehouse.  
@@ -12,7 +12,7 @@ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB02
 Step 4: Create the schema.  
 psql -h localhost -U postgres -p 5432 billingDW < star-schema.sql  
 
-###### Lab: Setting up a staging area  
+##### Lab: Setting up a staging area  
 Step 1: Start the postgresql server.  
 start_postgres  
 Step 2: Create Database.  
@@ -31,7 +31,7 @@ psql  -h localhost -U postgres -p 5432 billingDW < FactBilling.sql
 Step 8: Run a sample query.  
 psql  -h localhost -U postgres -p 5432 billingDW < verify.sql  
 
-###### Lab: Verifying Data Quality for a Data Warehouse  
+##### Lab: Verifying Data Quality for a Data Warehouse  
 Step 1: Start the postgresql server.  
 start_postgres  
 Step 2: Download the staging area setup script.  
@@ -79,7 +79,7 @@ test4={
   "table": "DimMonth"
 }
 ```
-###### Lab: Populating a Data Warehouse  
+##### Lab: Populating a Data Warehouse  
 Step 1: We add the database, host, port and the security mode details.  
 db2cli writecfg add -database BLUDB -host 0c77d6f2-5da9-48a9-81f8-86b520b87518.bs2io90l08kqb1od8lcg.databases.appdomain.cloud -port 31198 -parameter "SecurityTransportMode=SSL"  
 Step 2: We give a name to the data source we just created.  
@@ -106,17 +106,17 @@ Step 10: Work with db2cli interactive command line. (change user and pw)
 db2cli execsql -dsn production -user jrg38634 -passwd SuWySBe5Y4MsYnh9  
 select count(*) from DimMonth;  
 
-###### Lab: Querying the Data Warehouse  
+##### Lab: Querying the Data Warehouse  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views.md.html?origin=www.coursera.org  
 
-###### Lab: Getting Started with Cognos Analytics  
+##### Lab: Getting Started with Cognos Analytics  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Getting%20Started%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
 
-###### Lab: Different Methods for Creating Dashboard Visualizations with Cognos Analytics  
+##### Lab: Different Methods for Creating Dashboard Visualizations with Cognos Analytics  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Different%20Methods%20for%20Creating%20Dashboard%20Visualizations%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
 
-###### Lab: Advanced Dashboard Capabilities in Cognos Analytics  
+##### Lab: Advanced Dashboard Capabilities in Cognos Analytics  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20%20Advanced%20Dashboard%20Capabilities%20in%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
 
-###### Lab: Analyzing DB2 Data With Cognos Analytics  
+##### Lab: Analyzing DB2 Data With Cognos Analytics  
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/AnalyzingDataWithCognos/HandsOn_DB2CognosAnalytics.md.html?origin=www.coursera.org  
