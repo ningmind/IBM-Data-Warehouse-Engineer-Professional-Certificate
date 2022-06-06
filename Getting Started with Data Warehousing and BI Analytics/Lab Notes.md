@@ -1,6 +1,6 @@
 ## [Hands-on Lab] Getting Started with Data Warehousing and BI Analytics
-#### Lab: Create Db2 service instance and Get started with the Db2 console  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html?origin=www.coursera.org
+
+#### Lab: [Create Db2 service instance and Get started with the Db2 console](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/labs/Labs_Coursera_V5/labs/Lab%20-%20Sign%20up%20for%20IBM%20Cloud%20-%20Create%20Db2%20service%20instance%20-%20Get%20started%20with%20the%20Db2%20console/instructional-labs.md.html?origin=www.coursera.org)
 
 #### Lab: Create the schema on the data warehouse  
 Step 1: Start the postgresql server.  
@@ -18,7 +18,7 @@ start_postgres
 Step 2: Create Database.  
 createdb -h localhost -U postgres -p 5432 billingDW  
 Step 3: Download the schema files.  
-wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz  
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz 
 tar -xvzf billing-datawarehouse.tgz  
 Step 4: Create the schema.  
 psql  -h localhost -U postgres -p 5432 billingDW < star-schema.sql  
@@ -106,17 +106,12 @@ Step 10: Work with db2cli interactive command line. (change user and pw)
 db2cli execsql -dsn production -user jrg38634 -passwd SuWySBe5Y4MsYnh9  
 select count(*) from DimMonth;  
 
-#### Lab: Querying the Data Warehouse  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views.md.html?origin=www.coursera.org  
+#### Lab: [Querying the Data Warehouse](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views/Querying%20the%20Data%20Warehouse%20-Cubes,%20Rollups,%20Grouping%20Sets%20and%20Materialized%20Views.md.html?origin=www.coursera.org)  
 
-#### Lab: Getting Started with Cognos Analytics  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Getting%20Started%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
+#### Lab: [Getting Started with Cognos Analytics](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%204%20-%20Getting%20Started%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org)  
 
-#### Lab: Different Methods for Creating Dashboard Visualizations with Cognos Analytics  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Different%20Methods%20for%20Creating%20Dashboard%20Visualizations%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
+#### Lab: [Different Methods for Creating Dashboard Visualizations with Cognos Analytics](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%205%20-%20Different%20Methods%20for%20Creating%20Dashboard%20Visualizations%20with%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org)  
 
-#### Lab: Advanced Dashboard Capabilities in Cognos Analytics  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20%20Advanced%20Dashboard%20Capabilities%20in%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org  
+#### Lab: [Advanced Dashboard Capabilities in Cognos Analytics](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0130EN-SkillsNetwork/Hands-on%20Labs/Lab%206%20-%20%20Advanced%20Dashboard%20Capabilities%20in%20Cognos%20Analytics/instructions.md.html?origin=www.coursera.org)  
 
-#### Lab: Analyzing DB2 Data With Cognos Analytics  
-https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/AnalyzingDataWithCognos/HandsOn_DB2CognosAnalytics.md.html?origin=www.coursera.org  
+#### Lab: [Analyzing DB2 Data With Cognos Analytics](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/AnalyzingDataWithCognos/HandsOn_DB2CognosAnalytics.md.html?origin=www.coursera.org)  
