@@ -1,5 +1,4 @@
-> **Introduction to Relational Databases (RDBMS)**
-> 
+## Introduction to Relational Databases (RDBMS)
 - Relational Database
     - Information Model (conceptual level): an abstract, formal representation of entities that includes their properties, relationships and the operations that can be performed on them
     - Data Model (concrete level): the blueprint of any database system
