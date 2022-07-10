@@ -1,0 +1,73 @@
+> **Introduction to Relational Databases (RDBMS)**
+> 
+- Relational Database
+    - Information Model (conceptual level): an abstract, formal representation of entities that includes their properties, relationships and the operations that can be performed on them
+    - Data Model (concrete level): the blueprint of any database system
+    - Relational Database (Relation = mathematical term for table)
+        - Relation Schema: specifies the name of a relation, name and type of each column
+        - Relation Instance: a table made up of rows (tuples/cardinality) and columns (attributes/fields/degree)
+    - Deployment Topologies
+        - Local/Desktop: resides on the user’s system, single user environment, single-tier architeture
+            - Usage scenarios: development/test, databse embedded in a local application
+        - Client/Server: resides on a database server, users access database from client systems, sometimes there is a middle-tier
+            - Usage scenarios: multi-user, production environment
+        - Cloud: resides in a cloud environment, no need to download or install software, users can access the cloud easily, clients access the database through an application server layer or interface in the cloud
+    - Top 10 popular databases at Feb 2021: Oracle, MySQL, Microsoft SQL Server, PostgreSQL, IBM Db2, SQLite, Microsoft Access, MariaDB, Hive, Microsoft Azure SQL Database
+- Relational Database Architecture
+    - 2-Tier Database Architecture
+        - Client application and database server run in separate tiers
+        - Application connects to the databse through an API or framework
+        - Database interface communicates through a database client
+    - 3-Tier Database Architecture
+        - Application presentation layer and business logic layer reside in different tiers
+        - Users interact with a client presentation layer such as a mobile application
+        - Client application communicates with application server
+        - Application server communicates with database server
+    - Distributed Architecture
+        - Mission critical, large scale workloads, high availability, high scalability, databases distributed on a cluster of servers
+        - Shared disk architecture (share common storage) & Shared nothing architecture (replication, partitioning)
+    - Database Design: crucial to the success of a project
+        - Contributes to: Integrity of data, Reduction of redundancy, Performance, User satisfaction
+        - Process: Requirements analysis, Logical design, Physical design
+- Creating Tables and Loading Data with Keys, Indexes, and Constraints
+    - Types of SQL Statements
+        - DDL (Data Definition Language) statements: define, change, or drop data (e.g. CREATE, ALTER, TRUNCATE, DROP)
+        - DML (Data Manipulation Language) statements: read and modify data, CRUD operations - Create, Read, Update & Delete rows (e.g. INSERT, SELECT, UPDATE, DELETE)
+    - Methods for creating tables
+        - Visual or UI tools: Db2 on Cloud console, MySQL phpMyAdmin, PostgreSQL PGAdmin
+        - CREATE TABLE SQL statement
+        - Administrative APIs
+    - Data Movement Utilities
+        - Backup: creates a file for the entire database
+        - Restore: creates exact copy of the database from file
+        - Import: inserts data from a file into a table
+        - Export: saves table data into a file
+        - Load: supports XML, large objects, and user-defined types; faster than the import utility; doesn’t perform as many checks; preferred option for loading very large datasets
+    - Index
+        - CREATE UNIQUE INDEX index_name ON table_name(column_name);
+        - Advantages: improved performance of SELECT queries, reduced need to sort data, guaranteed uniqueness of rows
+        - Disadvantages: use disk space, decreased performance of INSERT, UPDATE, and DELETE queries
+    - Normalization
+        - First normal form (1NF): the table contains only single values and has no repeating groups
+        - Second normal form (2NF): splits data into multiple tables to reduce redundancy
+- MySQL vs PostgreSQL
+    - MySQL
+        - MySQL options: download and install (Community Edition, Commercial Editions), Cloud (VM images or containers, Managed service)
+        - Popular MySQL tools: mysql command line, mysqladmin, MySQL Workbench, phpMyAdmin
+        - Command line backup and restore
+            - Backup using mysqldump utility: mysqldump -u root table_name > file_name.sql
+            - Restore using mysql: mysql -u root restored_table_name < file_name.sql
+            - Restore using source command: mysql > source file_name.sql
+        - Types of Keys: Primary keys (one column or a combination of columns, not null, unique, indexed), Foreign keys, Unique constraints, Null constraints:
+    - PostgreSQL
+        - An open source object-relational database management system, reliable and flexible, supports relational and non-reltional data types, uses include OLTP/Data analytics/Geographic information systems
+        - PostgreSQL options: download and install (macOS, UNIX/UNIX-based/UNIX-like systems, Windows), Cloud (VM images or containers, Managed services)
+        - PostgreSQL RDBMS: psql command line, pgAdmin, Navicat, DBeaver, Cloud vendor tools and APIs
+        - Command line backup and store
+            - Backup: pg_dump table_name > file_name.sql
+            - Restore: psql restored_table_name < file_name.sql
+        - View: an alternative way of representing data from one or more tables or other views, can interact with views in the same way as you interact with tables, use to:
+            - Limit access to sensitive data
+            - Simplify data retrieval
+            - Reduce access to underlying tables
+        - Materialized views: behave differently to regular views, result set is materialized or saved for future use, cannot insert/update/delete rows, can improve performance
