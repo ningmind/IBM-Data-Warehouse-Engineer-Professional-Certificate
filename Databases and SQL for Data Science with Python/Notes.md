@@ -1,0 +1,61 @@
+## Databases and SQL for Data Science with Python
+- Accessing Databases using Python
+    - Benefits of Python for database programming
+        - Python ecosystem: NumPy, pandas, matplotlib, SciPy
+        - Ease of use, portable, detailed documentation
+        - Python supports relational database systems
+        - Python database API (e.g. MySQL C API, psycopg2, ibm_db, ODBC, OCI, JDBC)
+    - DB-API
+        - Definition: Python’s standard API for accessing relational databases, allows a single program to work with multiple kinds of relational databases
+        - Benefits
+            - Easy to implement and understand
+            - Encourages similarity between the Python modules used to access databases
+            - Achieves consistency
+            - Portable across databases
+            - Broad reach of database connectivity from Python
+        - Concepts
+            - Connection objects: database connections, manage transactions
+            - Cursor objects: database queries, scroll through result set, retrieve results
+        - Writing code using DB-API
+            - Connection=connect(’databasename’,’username’,’pswd’)
+            - Cursor=connection.cursor()
+            - Cursor.execute(’select * from mytable’)
+            - Results=cursor.fetchall()
+- Views, Stored Procedures, and Transactions
+    - View definition
+        - Can include specified columns from multiple base tables and existing views
+        - Once created, can be queried like a table
+        - Only the definition of the view is stored, not the data
+    - When to use a view
+        - Show a selection of data for a given table
+        - Combine two or more tables in meaningful ways
+        - Simplify access to data
+        - Show only portions of data in the table
+    - Stored procedure definition
+        - A set of SQL statements stored and executed on the database server (write in many different languages, accept information in the form of parameters, return results to the client)
+    - Benefits of stored procedures
+        - Reduction in network traffic
+        - Improvement in performance
+        - Reuse of code
+        - Increase in security
+    - Transaction definition
+        - Indivisible unit of work
+        - Consists of one or more SQL statements
+        - Either all happens or none
+    - ACID transactions
+        - Atomic: all changes must be performed successfully or not at all
+        - Consistent: data must be in a consistent state before and after the transaction
+        - Isolated: no other process can change the data while the transaction is running
+        - Durable: the changes made by the transaction must persist
+    - ACID commands
+        - BEGIN: start the ACID transaction
+        - COMMIT: all statements complete successfully, save the new database state
+        - ROLLBACK: one or more statements fail, undo changes
+- JOIN Statements
+    - JOIN operator
+        - Combines rows from two or more tables
+        - Based on a relationship
+    - Outer joins
+        - Left outer join: all rows from the left table & any matching rows from the right table
+        - Right outer join: all rows from the right table & any matching rows from the left table
+        - Full outer join: all rows from both tables
