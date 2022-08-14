@@ -1,1 +1,80 @@
-
+## Hands-on Introduction to Linux Commands and Shell Scripting
+- Introduction to Linux
+    - Operating System
+        - Manages computer hardware and resources
+        - Allows interaction with hardware to perform useful tasks
+        - Unix: family of operating systems (e.g. Oracle Solaris, FreeBSD, HP-UX, IBM AIX, Apple macOS)
+    - Linux: family of Unix-like OSs
+        - Feature: free and open source, secure, multi-user, multitasking, portability
+        - Use cases: Android, supercomputers, data centers and cloud services, PCs
+    - Linux Architecture
+        - User
+        - Application (any software that lets you perform a task)
+            - System daemons
+            - Shells
+            - User apps (browsers, text editors, games, etc.)
+            - Tools (programming languages)
+        - Operating system (controls the jobs and programs vital to health and stability)
+        - Kernel
+            - Lowest-level software in system
+            - Starts on boot and remains in memory
+            - Bridge between apps and hardware
+            - Key jobs: memory management, process management, device drivers, system calls and security
+        - Hardware (consists of all physical electronic devices on PC - CPU, RAM, storage, screen, USB devices)
+    - Linux Distribution: a specific flavor of Linux OS, also known as a distro, uses the Linux kernel, hundreds of Linux distros tailored for different audiences or tasks
+- Linux Shell
+    - Linux Shell Overview: OS-level application that interprets commands
+        - Moving and copying files
+        - Writing to and reading from files
+        - Extracting and filtering data
+        - Searching for data
+    - Shells: Bash, Zsh
+    - Linux Terminal: an application you can use to interact with the Linux shell
+    - Paths in the Linux filesystem: ~ for Home directory, / for Root directory
+    - Popular text editors
+        - Command-line text editors: GNU nano, vi, vim
+            - GNU nano: a commnd-line text editor (undo and redo, search and replace, syntax highlighting, indenting groups of lines, line numbers, line-by-line scrolling, multiple buffers)
+            - Vim: a traditional and very powerful command-line editor, two basic modes (insert and command)l
+        - GUI-based text editors: gedit
+            - gedit: general-purpose editor, easy to use with a clean, simple GUI (integrated file browser, undo and redo, search and replace, extensibility)
+        - Command-line or GUI: emacs
+    - Packages: archive files, for installing new software or updating existing software
+    - Deb and RPM packages: packages for Linux OS
+        - .deb files: for Debian-based distributions such as Debian, Ubuntu, and Mint
+        - .rpm files: for Red Hat-based distributons such as CentOS/RHEL, Fedora, and openSUSE
+- Linux Commands
+    - Shell command applications
+        - Getting information
+        - Navigating and working with files and directories
+        - Printing file and string contents
+        - Compression and archiving
+        - Performing network operations
+        - Monitoring performance and status
+        - Running batch jobs
+    - Getting information
+        - whoami (username), id (user id and group id), uname (os name), ps (running processes), top (resource usage), df (mounted file systems), man (reference manual)
+    - Working with files
+        - cp (copy), mv (change file name or path), rm (remove), touch (create empty file, update file timestamp), chmod (change/modify file permissions), wc (get count of lines, words, characters in file), grep (return lines in file matching pattern), sort (sort lines in a file), uniq (filter our repeated lines), cut (extract a section from each line), paste (merge lines from different files)
+    - Navigating & working with directories
+        - ls (list files and directories), find (find files in directory tree), pwd (get present working directory), mkdir (make directory), cd (change directory), rmdir (remove directory)
+    - Printing file and string contents
+        - cat (print file contents), more (print file contents page-by-page), head (print first N lines of file), tail (print last N lines of file), echo (print string or variable value)
+    - Compression and archiving
+        - tar (archive a set of files), zip (compress a set of files), unzip (extract files from a compressed zip archive)
+    - Networking
+        - hostname (print hostname), ping (send packets to URL and print response), ifconfig (display or configure system network interfaces), curl (display contents of file at a URL), wget (download file from URL)
+- Shell Scripting
+    - Script: list of commands interpreted by a scripting language
+        - Commands can be entered interactively or listed in a text file
+        - Scripting language are interpreted at runtime, slower to run but faster to develop
+    - Script commonly used for automate processes, ETL jobs, file backups and archiving, system admin, application integration, plug-in development, web apps, and many other tasks
+    - Filters (e.g. wc, cat, more, head, sort, etc.)
+        - Take input from standard input
+        - Send output to standard output
+        - Transform input data into output data
+        - Filters can be chained together
+    - Pipe: for chaining filter commands (command1 | command2)
+    - Metacharacters
+        - \# (precedes a comment), ; (command separator), * (filename expansion wildcard), ? (single character wildcard in filename expansion)
+    - Quoting
+        - \ (escape special character interpretation), “” (interpret literally, but evaluate metacharacters), ‘’ (interpret literally)
