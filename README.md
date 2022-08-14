@@ -2,7 +2,8 @@
 
 ## Content
 #### 1. Introduction to Data Engineering
-
+   - [Course Page](https://www.coursera.org/learn/introduction-to-data-engineering)
+   - [Notes](./Introduction%20to%20Data%20Engineering/Notes.md)
 #### 2. Introduction to Relational Databases (RDBMS)
    - [Course Page](https://www.coursera.org/learn/introduction-to-relational-databases)
    - [Notes](./Introduction%20to%20Relational%20Databases%20(RDBMS)/Notes.md)
